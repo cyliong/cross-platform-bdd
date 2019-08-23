@@ -1,0 +1,35 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.3.50'
+}
+
+ext {
+    cucumberVersion = "4.7.1"
+    appiumVersion = "7.2.0"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+
+    testImplementation "io.cucumber:cucumber-java8:$cucumberVersion"
+    testImplementation "io.cucumber:cucumber-junit:$cucumberVersion"
+    testImplementation "io.appium:java-client:$appiumVersion"
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+["Android", "IOS"].each { platform ->
+    task("test$platform", type: JavaExec) {
+        main = "io.cucumber.core.cli.Main"
+        classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+        args '--plugin', 'pretty', '--glue', 'com.example.ltp.list', 'src/test/resources'
+        systemProperty 'platform', platform.toLowerCase()
+    }
+}
