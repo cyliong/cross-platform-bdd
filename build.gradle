@@ -4,7 +4,7 @@ plugins {
 
 ext {
     cucumberVersion = "4.7.1"
-    appiumVersion = "7.2.0"
+    appiumVersion = "7.3.0"
 }
 
 repositories {
