@@ -8,7 +8,7 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy
 class ListPage(driver: AppiumDriver<MobileElement>) : Page(driver) {
 
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@resource-id='com.example.ltp.list:id/toolbar']/android.widget.TextView[1]")
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeNavigationBar/XCUIElementTypeOther[@name='List']")
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeNavigationBar/XCUIElementTypeStaticText[@name='List']")
     private lateinit var title: MobileElement
 
     @AndroidFindBy(id = "com.example.ltp.list:id/fab")

@@ -7,11 +7,11 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy
 
 class ItemPage(driver: AppiumDriver<MobileElement>) : Page(driver) {
 
-    @AndroidFindBy(xpath = "//android.widget.EditText[1]")
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeAlert//XCUIElementTypeTextField")
+    @AndroidFindBy(id = "com.example.ltp.list:id/edit_text_item_title")
+    @iOSXCUITFindBy(id = "TitleTextField")
     private lateinit var editField: MobileElement
 
-    @AndroidFindBy(id = "android:id/button1")
+    @AndroidFindBy(id = "com.example.ltp.list:id/action_save")
     @iOSXCUITFindBy(accessibility = "Save")
     private lateinit var saveButton: MobileElement
 
