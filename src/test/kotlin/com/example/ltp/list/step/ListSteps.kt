@@ -4,8 +4,8 @@ import com.example.ltp.list.DriverFactory
 import com.example.ltp.list.page.ListPage
 import io.appium.java_client.AppiumDriver
 import io.appium.java_client.MobileElement
-import io.cucumber.core.api.Scenario
 import io.cucumber.java8.En
+import io.cucumber.java8.Scenario
 import org.junit.Assert.assertTrue
 import java.util.concurrent.TimeUnit
 
