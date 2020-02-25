@@ -1,18 +1,17 @@
 package com.example.ltp.list.page
 
-import io.appium.java_client.AppiumDriver
-import io.appium.java_client.MobileElement
+import com.example.ltp.list.Context
 import io.appium.java_client.pagefactory.AppiumFieldDecorator
 import org.openqa.selenium.support.PageFactory
 
-abstract class Page(protected val driver: AppiumDriver<MobileElement>) {
+abstract class Page(protected val context: Context) {
 
     init {
         initElements()
     }
 
     private fun initElements() {
-        PageFactory.initElements(AppiumFieldDecorator(driver), this)
+        PageFactory.initElements(AppiumFieldDecorator(context.driver), this)
     }
 
 }

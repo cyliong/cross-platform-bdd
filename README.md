@@ -3,13 +3,14 @@ This is an implementation of test automation for Android and iOS apps in behavio
 
 The sample scenario provided by the project is written to test the mobile apps built from the [list-android](https://github.com/cyliong/list-android) and [list-ios](https://github.com/cyliong/list-ios) projects.
 
-Page Object pattern is used in the implementation to make the test code more readable, maintainable, and reusable.
+Page Object pattern is used in the implementation to make the test code more readable, maintainable, and reusable. In addition, dependency injection is used to to share state between steps.
 
 ## Dependencies
 - Kotlin/JVM
 - Cucumber
 - Appium
 - Gradle
+- PicoContainer
 
 ## Setup
 1. Place the app packages (e.g. list.apk and List.app built from [list-android](https://github.com/cyliong/list-android) and [list-ios](https://github.com/cyliong/list-ios)) to a directory.

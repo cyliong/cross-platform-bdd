@@ -1,11 +1,11 @@
 package com.example.ltp.list.page
 
-import io.appium.java_client.AppiumDriver
+import com.example.ltp.list.Context
 import io.appium.java_client.MobileElement
 import io.appium.java_client.pagefactory.AndroidFindBy
 import io.appium.java_client.pagefactory.iOSXCUITFindBy
 
-class ListPage(driver: AppiumDriver<MobileElement>) : Page(driver) {
+class ListPage(context: Context) : Page(context) {
 
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@resource-id='com.example.ltp.list:id/toolbar']/android.widget.TextView[1]")
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeNavigationBar/XCUIElementTypeStaticText[@name='List']")
@@ -23,7 +23,7 @@ class ListPage(driver: AppiumDriver<MobileElement>) : Page(driver) {
 
     fun pressAddButton(): ItemPage {
         addButton.click()
-        return ItemPage(driver)
+        return ItemPage(context)
     }
 
     fun hasItem(item: String) = items.find { it.text == item } != null

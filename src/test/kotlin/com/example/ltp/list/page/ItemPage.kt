@@ -1,11 +1,11 @@
 package com.example.ltp.list.page
 
-import io.appium.java_client.AppiumDriver
+import com.example.ltp.list.Context
 import io.appium.java_client.MobileElement
 import io.appium.java_client.pagefactory.AndroidFindBy
 import io.appium.java_client.pagefactory.iOSXCUITFindBy
 
-class ItemPage(driver: AppiumDriver<MobileElement>) : Page(driver) {
+class ItemPage(context: Context) : Page(context) {
 
     @AndroidFindBy(id = "com.example.ltp.list:id/edit_text_item_title")
     @iOSXCUITFindBy(id = "TitleTextField")
@@ -18,7 +18,7 @@ class ItemPage(driver: AppiumDriver<MobileElement>) : Page(driver) {
     fun enterItem(item: String): ListPage {
         editField.sendKeys(item)
         saveButton.click()
-        return ListPage(driver)
+        return ListPage(context)
     }
 
 }

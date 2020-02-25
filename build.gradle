@@ -16,6 +16,7 @@ dependencies {
 
     testImplementation "io.cucumber:cucumber-java8:$cucumberVersion"
     testImplementation "io.cucumber:cucumber-junit:$cucumberVersion"
+    testImplementation "io.cucumber:cucumber-picocontainer:$cucumberVersion"
     testImplementation "io.appium:java-client:$appiumVersion"
 }
 
