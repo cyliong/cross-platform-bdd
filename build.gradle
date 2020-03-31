@@ -3,7 +3,7 @@ plugins {
 }
 
 ext {
-    cucumberVersion = "5.4.0"
+    cucumberVersion = "5.5.0"
     appiumVersion = "7.3.0"
 }
 
