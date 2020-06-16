@@ -7,20 +7,18 @@ import org.junit.Assert.assertTrue
 class ListSteps(listPage: ListPage) : En {
 
     init {
-        val newItem = "Item 1"
-
         Given("I am on the list page") {
             assertTrue(listPage.isDisplayed())
         }
 
-        When("I add a new item") {
+        When("I add a new item {string}") { item: String ->
             listPage
                 .pressAddButton()
-                .enterItem(newItem)
+                .enterItem(item)
         }
 
-        Then("I should see the new item on the list") {
-            assertTrue(listPage.hasItem(newItem))
+        Then("I should see {string} on the list") { item: String ->
+            assertTrue(listPage.hasItem(item))
         }
     }
 
