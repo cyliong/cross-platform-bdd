@@ -5,11 +5,11 @@ The sample scenario provided by the project is written to test the mobile apps b
 
 Page Object pattern is used in the implementation to make the test code more readable, maintainable, and reusable. In addition, dependency injection is used to to share state between steps.
 
-## Dependencies
+## Building Blocks
 - Kotlin/JVM
-- Cucumber
+- Cucumber (Kotlin step definitions)
 - Appium
-- Gradle
+- Gradle (Kotlin DSL)
 - PicoContainer
 
 ## Setup
