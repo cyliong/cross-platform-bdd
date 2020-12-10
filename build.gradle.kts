@@ -3,7 +3,7 @@ plugins {
 }
 
 val cucumberVersion = "6.9.0"
-val appiumVersion = "7.4.0"
+val appiumVersion = "7.4.1"
 val seleniumVersion = "3.141.59"
 
 repositories {
