@@ -15,7 +15,7 @@ class Hooks(context: Context) : En {
                 val folder = File("screenshots")
                 if (!folder.exists()) folder.mkdir()
                 val file = (context.driver as TakesScreenshot).getScreenshotAs(OutputType.FILE)
-                file.copyTo(File(folder, "screenshot.png"), true)
+                file.copyTo(File(folder, "${scenario.name.replace(' ', '_')}.png"), true)
             }
             context.driver.quit()
         }
