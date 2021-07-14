@@ -22,7 +22,7 @@ val cucumberRuntime: Configuration by configurations.creating {
 
 arrayOf("Android", "IOS").forEach { platform ->
     tasks.register<JavaExec>("test$platform") {
-        main = "io.cucumber.core.cli.Main"
+        mainClass.set("io.cucumber.core.cli.Main")
         classpath = cucumberRuntime + sourceSets.main.get().output + sourceSets.test.get().output
         args = listOf("--plugin", "pretty", "--glue", "com.example.ltp.list", "src/test/resources")
         systemProperty("platform", platform.toLowerCase())
