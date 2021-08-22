@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm") version "1.5.21"
 }
 
-val cucumberVersion = "6.10.4"
+val cucumberVersion = "6.11.0"
 val appiumVersion = "7.5.1"
 
 repositories {
