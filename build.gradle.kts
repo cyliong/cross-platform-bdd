@@ -3,7 +3,7 @@ plugins {
 }
 
 val cucumberVersion = "7.0.0"
-val appiumVersion = "7.5.1"
+val appiumVersion = "7.6.0"
 
 repositories {
     mavenCentral()
