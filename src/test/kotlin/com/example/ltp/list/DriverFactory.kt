@@ -27,7 +27,7 @@ class DriverFactory {
             } else {
                 val capabilities = DesiredCapabilities().apply {
                     setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID)
-                    setCapability(MobileCapabilityType.PLATFORM_VERSION, "9")
+                    setCapability(MobileCapabilityType.PLATFORM_VERSION, "10")
                     setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator")
                     setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2")
                     setCapability(MobileCapabilityType.APP, "/path/to/list.apk")
