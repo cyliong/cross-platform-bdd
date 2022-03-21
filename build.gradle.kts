@@ -4,6 +4,7 @@ plugins {
 
 val cucumberVersion = "7.2.2"
 val appiumVersion = "8.0.0"
+val seleniumVersion = "4.1.1"
 
 repositories {
     mavenCentral()
@@ -14,6 +15,7 @@ dependencies {
     testImplementation("io.cucumber:cucumber-junit:$cucumberVersion")
     testImplementation("io.cucumber:cucumber-picocontainer:$cucumberVersion")
     testImplementation("io.appium:java-client:$appiumVersion")
+    testImplementation("org.seleniumhq.selenium:selenium-java:$seleniumVersion")
 }
 
 val cucumberRuntime: Configuration by configurations.creating {
