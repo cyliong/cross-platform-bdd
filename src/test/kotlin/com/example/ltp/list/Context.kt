@@ -1,12 +1,12 @@
 package com.example.ltp.list
 
-import java.util.concurrent.TimeUnit
+import java.time.Duration
 
 class Context {
 
     val driver by lazy {
         DriverFactory.createDriver().apply {
-            manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS)
+            manage().timeouts().implicitlyWait(Duration.ofSeconds(20))
         }
     }
 
