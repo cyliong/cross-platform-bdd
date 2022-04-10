@@ -1,12 +1,13 @@
 package com.example.ltp.list
 
-import java.time.Duration
+import kotlin.time.Duration.Companion.seconds
+import kotlin.time.toJavaDuration
 
 class Context {
 
     val driver by lazy {
         DriverFactory.createDriver().apply {
-            manage().timeouts().implicitlyWait(Duration.ofSeconds(20))
+            manage().timeouts().implicitlyWait(20.seconds.toJavaDuration())
         }
     }
 
